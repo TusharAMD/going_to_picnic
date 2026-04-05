@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { Mistral } from '@mistralai/mistralai';
 
-const apiKey = "";
+const apiKey = "w6RmSlWWDPpfY6WkFZU2PlLDQ4FYaybE";
 const mistral = new Mistral({ apiKey: apiKey });
 
 const styles = `
@@ -542,13 +542,15 @@ Response:
   async function startGame() {
     setPhase('loading');
     try {
-      const res = await mistral.chat.complete({
+      /*const res = await mistral.chat.complete({
         model: 'mistral-small-latest',
         messages: [{ role: 'user', content: promptForRules }],
         responseFormat: { type: 'json_object' },
         temperature: 0.8,
       });
-      const parsed = JSON.parse(res.choices[0].message.content);
+      const parsed = JSON.parse(res.choices[0].message.content);*/
+      //const parsed = { rule: "The item must be the name of a mammal", item: "squirrel" }; 
+      const parsed = { rule: "Items must be the name of a fictional creature or character from any mythological, literary, or fantasy source.", item: "Pegasus" };
       setDecidedRules(parsed.rule);
       setItemsSoFar([parsed.item]);
       setCanBringItems([{ text: parsed.item, byAI: true }]);
