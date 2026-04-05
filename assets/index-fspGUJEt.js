@@ -534,7 +534,7 @@ You are the Game Master for a picnic packing game. Your task is to invent a secr
 Generate the secret rule and provide the first item to start the game.
 
 Response:
-  `);async function ae(){t(`loading`);try{let e={rule:`Items must be the name of a fictional creature or character from any mythological, literary, or fantasy source.`,item:`Pegasus`};a(e.rule),s([e.item]),u([{text:e.item,byAI:!0}]),ie(`I am going to the picnic and I am bringing ${e.item}`),t(`playing`),console.log(`Parsed rules on game start:`,e)}catch(e){console.error(e),t(`start`)}}async function oe(){if(!p.trim()||ee)return;let e=p.trim();m(``),te(!0);let t=`
+  `);async function ae(){t(`loading`);try{let e={rule:`The item must be the name of a mammal`,item:`squirrel`};a(e.rule),s([e.item]),u([{text:e.item,byAI:!0}]),ie(`I am going to the picnic and I am bringing ${e.item}`),t(`playing`),console.log(`Parsed rules on game start:`,e)}catch(e){console.error(e),t(`start`)}}async function oe(){if(!p.trim()||ee)return;let e=p.trim();m(``),te(!0);let t=`
       You are the Game Master for a picnic packing game. Your task is to evaluate the user's item against the secret rule.
 
       ### RULE
